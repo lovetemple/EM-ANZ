@@ -157,12 +157,12 @@ pipeline {
             echo 'report'
           }
         }
-        stage('skype out report') {
+        stage('skype bot report') {
           steps {
             echo 'skype out the report'
           }
         }
-        stage('email report') {
+        stage('email bot report') {
           steps {
             echo 'email report'
           }
