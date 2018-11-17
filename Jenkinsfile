@@ -75,16 +75,11 @@ pipeline {
             echo 'integration tests'
           }
         }
-        stage('performance tests') {
-          steps {
-            echo 'performance tests'
-          }
-        }
       }
     }
-    stage('publish+tag RC') {
+    stage('publish+tag TC') {
       steps {
-        echo 'artifactory release candidate'
+        echo 'artifactory Test candidate'
       }
     }
     stage('deploy to staging') {
@@ -99,6 +94,84 @@ pipeline {
             echo 'monitor app health'
           }
         }
+      }
+    }
+    stage('functional tests-staging') {
+      parallel {
+        stage('functional tests') {
+          steps {
+            echo 'functional smoke tests'
+          }
+        }
+        stage('app1') {
+          steps {
+            echo 'app1'
+          }
+        }
+        stage('app2') {
+          steps {
+            echo 'app2'
+          }
+        }
+        stage('app3') {
+          steps {
+            echo 'app3'
+          }
+        }
+        stage('app4') {
+          steps {
+            echo 'app1'
+          }
+        }
+        stage('app5') {
+          steps {
+            echo 'app5'
+          }
+        }
+        stage('app6') {
+          steps {
+            echo 'app6'
+          }
+        }
+        stage('app7') {
+          steps {
+            echo 'app7'
+          }
+        }
+        stage('app8') {
+          steps {
+            echo 'app8'
+          }
+        }
+        stage('app9') {
+          steps {
+            echo 'app9'
+          }
+        }
+      }
+    }
+    stage('report') {
+      parallel {
+        stage('report') {
+          steps {
+            echo 'report'
+          }
+        }
+        stage('skype out report') {
+          steps {
+            echo 'skype out the report'
+          }
+        }
+        stage('email report') {
+          steps {
+            echo 'email report'
+          }
+        }
+      }
+    }
+    stage('jira (Zepher/Zapi) integration') {
+      steps {
+        echo 'jira (Zepher/Zapi) integration traceability'
       }
     }
   }
