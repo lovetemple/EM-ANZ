@@ -103,49 +103,74 @@ pipeline {
             echo 'functional smoke tests'
           }
         }
-        stage('app1') {
+        stage('AirWatch Agent ') {
           steps {
-            echo 'app1'
+            echo 'AirWatch Agent '
           }
         }
-        stage('app2') {
+        stage('AirWatch Agent  Browser') {
           steps {
-            echo 'app2'
+            echo 'AirWatch Browser'
           }
         }
-        stage('app3') {
+        stage('Discover Digital ') {
           steps {
-            echo 'app3'
+            echo 'Discover Digital '
           }
         }
-        stage('app4') {
+        stage('ANZ Gateway') {
           steps {
-            echo 'app1'
+            echo 'ANZ Gateway'
           }
         }
-        stage('app5') {
+        stage('ANZ on Tour') {
           steps {
-            echo 'app5'
+            echo 'ANZ on Tour'
           }
         }
-        stage('app6') {
+        stage('GoMoney Demo AU') {
           steps {
-            echo 'app6'
+            echo 'GoMoney Demo AU'
           }
         }
-        stage('app7') {
+        stage('GoMoney Demo NZ') {
           steps {
-            echo 'app7'
+            echo 'GoMoney Demo NZ'
           }
         }
-        stage('app8') {
+        stage('AtoZ review Small business') {
           steps {
-            echo 'app8'
+            echo 'AtoZ review Small business'
           }
         }
-        stage('app9') {
+        stage('AtoZ review Mid Market') {
           steps {
-            echo 'app9'
+            echo 'AtoZ review Mid Market'
+          }
+        }
+        stage('VoiceNotes') {
+          steps {
+            echo 'VoiceNotes'
+          }
+        }
+        stage('SuperRegional') {
+          steps {
+            echo 'SuperRegional'
+          }
+        }
+        stage('ANZ Easy') {
+          steps {
+            echo 'ANZ Easy'
+          }
+        }
+        stage('Mobi') {
+          steps {
+            echo 'Mobi'
+          }
+        }
+        stage('Grow for Advice ') {
+          steps {
+            echo 'Grow for Advice '
           }
         }
       }
